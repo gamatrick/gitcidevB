@@ -15,3 +15,8 @@ function reset() {
 }
 
 module.exports = { getTasks, reset };
+
+
+function toogleTask(id){
+  return tasks[id];
+}
