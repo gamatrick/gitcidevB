@@ -12,6 +12,7 @@ function addTask(name) {
   let trimmedName = name.prototype.trim();
   tasks.push({trimmedName, id: nextId, done: false});
   nextId++;
+  return {trimmedName, id: nextId, done: false};
 }
 
 function reset() {
