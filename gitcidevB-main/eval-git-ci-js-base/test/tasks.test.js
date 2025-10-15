@@ -8,9 +8,16 @@ test('initial task list is empty', () => {
   expect(getTasks()).toEqual([]);
 });
 
+test("add task pass", () => {
+  expect(addTask("Dexter")).toEqual(
+    { name: "Dexter", id: 1, done: false},
+  )
+})
+
 test('add task to list', () => {
   addTask("Mazuka");
   expect(getTasks()).toEqual([
-    { name: "Mazuka", id: 1, done: false }
+    { name: "Dexter", id: 1, done: false},
+    { name: "Mazuka", id: 2, done: false }
   ]);
 });
