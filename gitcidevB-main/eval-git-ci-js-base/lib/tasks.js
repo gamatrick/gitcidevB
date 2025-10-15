@@ -10,9 +10,10 @@ function getTasks() {
 
 function addTask(name) {
   let trimmedName = name.trim();
-  tasks.push({trimmedName, id: nextId, done: false});
+  let localId = nextId;
+  tasks.push({name: trimmedName, id: localId, done: false});
   nextId++;
-  return {trimmedName, id: nextId, done: false};
+  return {name, id: localId, done: false};
 }
 
 function reset() {
