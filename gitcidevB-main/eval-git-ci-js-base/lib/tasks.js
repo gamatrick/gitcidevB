@@ -9,7 +9,7 @@ function getTasks() {
 }
 
 function addTask(name) {
-  let trimmedName = name.prototype.trim();
+  let trimmedName = name.trim();
   tasks.push({trimmedName, id: nextId, done: false});
   nextId++;
   return {trimmedName, id: nextId, done: false};
