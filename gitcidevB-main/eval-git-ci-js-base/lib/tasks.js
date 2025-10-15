@@ -8,6 +8,11 @@ function getTasks() {
   return tasks;
 }
 
+function addTask(name) {
+  let trimmedName = name.prototype.trim();
+  tasks.push({trimmedName, id: nextId, done: false});
+  nextId++;
+}
 
 function reset() {
   tasks = [];
