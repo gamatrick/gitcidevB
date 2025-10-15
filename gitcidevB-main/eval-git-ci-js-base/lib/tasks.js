@@ -14,9 +14,10 @@ function reset() {
   nextId = 1;
 }
 
-module.exports = { getTasks, reset };
-
-
-function toogleTask(id){
+function toggleTask(id){
   return tasks[id];
 }
+
+module.exports = { getTasks, reset, toggleTask };
+
+
