@@ -1,3 +1,5 @@
+[![CI](https://github.com/gamatrick/gitcidevB/actions/workflows/ci.yml/badge.svg)](https://github.com/gamatrick/gitcidevB/actions/workflows/ci.yml)
+
 VALENTIN LAMOUCHE - CORENTIN RENARD
 
 Ce projet est un projet de gestion de tâches en javascript.
