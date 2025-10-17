@@ -11,6 +11,10 @@ on:
       - 'fix/**'
   pull_request:
 
+defaults:
+  run:
+    working-directory: gitcidevB-main/eval-git-ci-js-base
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -23,6 +27,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+          cache-dependency-path: gitcidevB-main/eval-git-ci-js-base/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -35,5 +40,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: junit-report
-          path: reports/junit.xml
+          path: gitcidevB-main/eval-git-ci-js-base/reports/junit.xml
           if-no-files-found: ignore
