@@ -8,6 +8,13 @@ function getTasks() {
   return tasks;
 }
 
+function addTask(name) {
+  let trimmedName = name.trim();
+  let localId = nextId;
+  tasks.push({name: trimmedName, id: localId, done: false});
+  nextId++;
+  return {name, id: localId, done: false};
+}
 
 function reset() {
   tasks = [];
@@ -23,6 +30,6 @@ function toggleTask(id) {
 }
 
 
-module.exports = { getTasks, reset, toggleTask };
+module.exports = { getTasks, reset, toggleTask, addTask };
 
 
